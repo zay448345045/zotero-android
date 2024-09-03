@@ -37,8 +37,8 @@ jobs:
 #      - name: Decrypt Keystore
 #        run: openssl aes-256-cbc -d -in .github/keystore.cipher -k ${{secrets.SIGNING_KEY}} -md sha256 > zotero.release.keystore
 
-      - name: Decrypt Keystore secrets
-        run: openssl aes-256-cbc -d -in .github/keystore-secrets.cipher -k ${{secrets.SIGNING_KEY}} -md sha256 > keystore-secrets.txt
+#      - name: Decrypt Keystore secrets
+#        run: openssl aes-256-cbc -d -in .github/keystore-secrets.cipher -k ${{secrets.SIGNING_KEY}} -md sha256 > keystore-secrets.txt
 
       - name: Grant execute permission for bundle_translators.py
         run: chmod +x scripts/bundle_translators.py
