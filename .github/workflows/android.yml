@@ -34,7 +34,7 @@ jobs:
       - name: Writing PSPDFKIT's key into a file to be then picked up by gradle.
         run: echo ${{secrets.PSPDFKIT_KEY}} | sed 's/./& /g' > pspdfkit-key.txt
 
-      - name: Decrypt Keystore
+#      - name: Decrypt Keystore
 #        run: openssl aes-256-cbc -d -in .github/keystore.cipher -k ${{secrets.SIGNING_KEY}} -md sha256 > zotero.release.keystore
 
       - name: Decrypt Keystore secrets
