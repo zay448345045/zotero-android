@@ -4,6 +4,8 @@ on:
   push:
     branches: [ "master" ]
     # Pattern matched against refs/tags
+  pull_request:
+    branches: [ "main" ]
     tags:
       - '**'  # Push events to every tag including hierarchical tags like v1.0/beta
 
